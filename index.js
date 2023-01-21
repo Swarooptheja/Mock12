@@ -17,7 +17,9 @@ app.use(cors({
     origin:"*"
 }))
 
-
+ app.get("/",(req,res)=>{
+    res.send("Hello back to the home page")
+ })
 app.post("/signup",(req,res)=>{
     let {email,password,name}=req.body;
     try{
